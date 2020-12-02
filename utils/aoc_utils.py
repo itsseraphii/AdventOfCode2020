@@ -65,7 +65,7 @@ class AOCDay:
 
     def downloadInput(self):
         # If file already exists, only read it
-        if os.path.exists(self.inputFilename): 
+        if os.path.exists(self.inputPath): 
             self.readInput()
             return
 
@@ -88,7 +88,7 @@ class AOCDay:
 
         # Reading and appending each line to the inputData
         for line in file:
-            line.replace('\n', '')
+            line = line.replace('\n', '')
             if(line != ''):
                 self.inputData.append(line)
 
