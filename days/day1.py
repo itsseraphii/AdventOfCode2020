@@ -12,7 +12,7 @@ class Day1(AOCDay):
         return 0
     
     def part2(self):
-        # Find three inputs that add u^p to 2020
+        # Find three inputs that add up to 2020
         for x in range(len(self.inputData)):
             for y in range(len(self.inputData) - x):
                 for z in range(len(self.inputData) - x):

@@ -42,6 +42,11 @@ class AOCDay:
         # Getting input
         self.downloadInput()
 
+        # Common code (Executed before part 1 and 2)
+        startTime = time.time()
+        self.common()
+        time0 = time.time() - startTime
+
         # Part 1
         startTime = time.time()
         answer1 = self.part1()
@@ -52,14 +57,20 @@ class AOCDay:
         answer2 = self.part2()
         time2 = time.time() - startTime
 
+        totalTime = time0 + time1 + time2
+
         # Writing output
         self.writeOutput(
             "====================== Day" + str(self.dayNumber) + " ======================",
+            "Common time (ms) : " + str(time0),
+            "---------------------------------------------------",
             "Part 1 : " + str(answer1),
             "Time (ms): " + str(time1),
             "---------------------------------------------------",
             "Part 2 : " + str(answer2),
-            "Time (ms): " + str(time2)
+            "Time (ms): " + str(time2),
+            "---------------------------------------------------",
+            "Total time (ms): " + str(totalTime)
         )
 
 
@@ -109,6 +120,9 @@ class AOCDay:
         file.write(strToWrite)
         file.close()
     
+    def common(self):
+        pass
+
     def part1(self):
         pass
 
