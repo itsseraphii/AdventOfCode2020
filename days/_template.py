@@ -4,7 +4,7 @@ from utils.aoc_utils import AOCDay, day
 class DayTemplate(AOCDay):
     def common(self):
         return 0
-        
+
     def part1(self):
         return 0
     
